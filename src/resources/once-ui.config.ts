@@ -183,7 +183,7 @@ const schema: SchemaConfig = {
   logo: "public/logo.png",
   type: "Organization",
   name: "Собаки Шукаки",
-  description: "Підрозділ безпілотних систем"
+  description: "Підрозділ безпілотних систем",
   email: "",
 };
 
