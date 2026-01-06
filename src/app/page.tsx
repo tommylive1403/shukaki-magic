@@ -1,12 +1,5 @@
-import {
-  Column,
-  Row,
-  Heading,
-  Text,
-  Button,
-  Meta,
-  Schema,
-} from "@once-ui-system/core";
+import type { Metadata } from "next";
+import { Column, Row, Heading, Text, Button, Schema } from "@once-ui-system/core";
 import { baseURL } from "@/resources";
 import DonateActions from "@/components/DonateActions";
 
@@ -16,6 +9,47 @@ const NAV = [
   { label: "Контакти", href: "#contacts" },
   { label: "Звіти", href: "#reports" },
 ];
+
+export async function generateMetadata(): Promise<Metadata> {
+  const title = "Собаки Шукаки — підрозділ безпілотних систем";
+  const description =
+    "Підрозділ безпілотних систем. Аеророзвідка та FPV. Збір на ремонт дронів і авто.";
+
+  return {
+    title,
+    description,
+    metadataBase: new URL(baseURL),
+
+    openGraph: {
+      type: "website",
+      locale: "uk_UA",
+      url: "/",
+      title,
+      description,
+      siteName: "Собаки Шукаки",
+      images: [
+        {
+          url: "/og.png",
+          width: 1200,
+          height: 630,
+          alt: "Собаки Шукаки — підрозділ безпілотних систем",
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["/og.png"],
+    },
+
+    icons: {
+      icon: "/icon.png",
+      shortcut: "/favicon.ico",
+    },
+  };
+}
 
 export default function Home() {
   return (
