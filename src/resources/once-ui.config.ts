@@ -187,12 +187,12 @@ const schema: SchemaConfig = {
   email: "",
 };
 
-// social links
 const sameAs: SameAsConfig = {
-  Instagram: "http://www.instagram.com/shukaki_sobaki/",
-  Facebook: "http://www.facebook.com/sobaki.shukaki",
-  telegram: "https://t.me/+bMUnarod-Kw3Mzdi",
+  threads: "",
+  linkedin: "",
+  discord: "",
 };
+
 
 // social sharing configuration for blog posts
 const socialSharing: SocialSharingConfig = {
