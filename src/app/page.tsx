@@ -11,39 +11,19 @@ const NAV = [
 ];
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "Собаки Шукаки — підрозділ безпілотних систем";
-  const description =
-    "Підрозділ безпілотних систем. Аеророзвідка та FPV. Збір на ремонт дронів і авто.";
-
   return {
-    title,
-    description,
-    metadataBase: new URL(baseURL),
-
+    title: "Собаки Шукаки — підрозділ безпілотних систем",
+    description:
+      "Підрозділ безпілотних систем. Аеророзвідка та FPV. Збір на ремонт дронів і авто.",
+    metadataBase: new URL("https://shukaki-magic.vercel.app"),
     openGraph: {
       type: "website",
       locale: "uk_UA",
-      url: "/",
-      title,
-      description,
       siteName: "Собаки Шукаки",
-      images: [
-        {
-          url: "/og.png",
-          width: 1200,
-          height: 630,
-          alt: "Собаки Шукаки — підрозділ безпілотних систем",
-        },
-      ],
     },
-
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
-      images: ["/og.png"],
     },
-
     icons: {
       icon: "/icon.png",
       shortcut: "/favicon.ico",
