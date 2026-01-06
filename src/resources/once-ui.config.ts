@@ -14,7 +14,7 @@ import {
 import { home } from "./index";
 
 // IMPORTANT: Replace with your own domain address - it's used for SEO in meta tags and schema
-const baseURL: string = "https://demo.magic-portfolio.com";
+const baseURL: string = "https://shukaki-magic.vercel.app/";
 
 const routes: RoutesConfig = {
   "/": true,
@@ -28,12 +28,6 @@ const display: DisplayConfig = {
   location: true,
   time: true,
   themeSwitcher: true,
-};
-
-// Enable password protection on selected routes
-// Set password in the .env file, refer to .env.example
-const protectedRoutes: ProtectedRoutesConfig = {
-  "/work/automate-design-handovers-with-a-figma-to-code-pipeline": true,
 };
 
 // Import and set font for each variant
@@ -74,9 +68,9 @@ const fonts: FontsConfig = {
 // default customization applied to the HTML in the main layout.tsx
 const style: StyleConfig = {
   theme: "system", // dark | light | system
-  neutral: "gray", // sand | gray | slate | custom
+  neutral: "slate", // sand | gray | slate | custom
   brand: "cyan", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
-  accent: "red", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
+  accent: "aqua", // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan | custom
   solid: "contrast", // color | contrast
   solidStyle: "flat", // flat | plastic
   border: "playful", // rounded | playful | conservative
@@ -186,32 +180,32 @@ const mailchimp: MailchimpConfig = {
 
 // default schema data
 const schema: SchemaConfig = {
-  logo: "",
+  logo: "public/logo.png",
   type: "Organization",
-  name: "Once UI",
-  description: home.description,
-  email: "lorant@once-ui.com",
+  name: "Собаки Шукаки",
+  description: "Підрозділ безпілотних систем"
+  email: "",
 };
 
 // social links
 const sameAs: SameAsConfig = {
-  threads: "https://www.threads.com/@once_ui",
-  linkedin: "https://www.linkedin.com/company/once-ui/",
-  discord: "https://discord.com/invite/5EyAQ4eNdS",
+  Instagram: "http://www.instagram.com/shukaki_sobaki/",
+  Facebook: "http://www.facebook.com/sobaki.shukaki",
+  telegram: "https://t.me/+bMUnarod-Kw3Mzdi",
 };
 
 // social sharing configuration for blog posts
 const socialSharing: SocialSharingConfig = {
   display: true,
   platforms: {
-    x: true,
-    linkedin: true,
-    facebook: false,
+    x: false,
+    linkedin: false,
+    facebook: true,
     pinterest: false,
     whatsapp: false,
     reddit: false,
-    telegram: false,
-    email: true,
+    telegram: true,
+    email: false,
     copyLink: true,
   },
 };
