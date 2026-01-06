@@ -17,15 +17,6 @@ const NAV = [
   { label: "Звіти", href: "#reports" },
 ];
 
-export async function generateMetadata() {
-  return Meta.generate({
-    title: "Собаки Шукаки",
-    description: "Підрозділ безпілотних систем",
-    baseURL,
-    path: "/",
-  });
-}
-
 export default function Home() {
   return (
     <Column>
