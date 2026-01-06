@@ -2,82 +2,43 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Собаки",
+  lastName: "Шукаки",
+  name: "Собаки Шукаки",
+  role: "Підрозділ безпілотних систем",
+  avatar: "/images/avatar.jpg", // можеш замінити пізніше
+  email: "",
+  location: "Europe/Kyiv",
+  languages: [],
 };
 
 const newsletter: Newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  display: false,
+  title: <></>,
+  description: <></>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
-  {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: true,
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-    essential: true,
-  },
-  {
-    name: "Email",
-    icon: "email",
-    link: `mailto:${person.email}`,
-    essential: true,
-  },
+  { name: "Telegram", icon: "telegram", link: "https://t.me/sobaki_shukaki?direct", essential: true },
+  { name: "Instagram", icon: "instagram", link: "https://www.instagram.com/shukaki_sobaki/", essential: true },
+  { name: "Facebook", icon: "facebook", link: "http://www.facebook.com/sobaki.shukaki", essential: true },
+  { name: "TikTok", icon: "tiktok", link: "https://www.tiktok.com/@sobaki_shukaki", essential: true },
 ];
 
 const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
-  featured: {
-    display: true,
-    title: (
-      <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
-        <Line background="brand-alpha-strong" vert height="20" />
-        <Text marginRight="4" onBackground="brand-medium">
-          Featured work
-        </Text>
-      </Row>
-    ),
-    href: "/work/building-once-ui-a-customizable-design-system",
-  },
+  label: "Головна",
+  title: "Собаки Шукаки",
+  description: "Підрозділ безпілотних систем",
+  headline: <>Підрозділ безпілотних систем</>,
+  featured: { display: false, title: <></>, href: "/" },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      Основою нашої сили є поєднання людської відваги, технічної майстерності та глибокої
+      відданості Україні. У підрозділі аеророзвідки ми щодня доводимо: сучасна війна — це не лише
+      про зброю, а про розум, швидкість рішень та точність дій.
+    </>
   ),
 };
 
@@ -301,4 +262,4 @@ const gallery: Gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home };
