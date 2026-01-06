@@ -193,7 +193,6 @@ const sameAs: SameAsConfig = {
   discord: "",
 };
 
-
 // social sharing configuration for blog posts
 const socialSharing: SocialSharingConfig = {
   display: true,
