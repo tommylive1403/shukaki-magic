@@ -16,9 +16,9 @@ type TimeDisplayProps = {
 
 const ONEPAGE_NAV = [
   { label: "Про підрозділ", href: "/#about", icon: "person" },
-  { label: "Збір", href: "/#donate", icon: "credit-card" },
-  { label: "Контакти", href: "/#contacts", icon: "send" },
-  { label: "Звіти", href: "/#reports", icon: "file" },
+  { label: "Збір", href: "/#donate", icon: "coin" },      // було credit-card
+  { label: "Контакти", href: "/#contacts", icon: "email" }, // було send
+  { label: "Звіти", href: "/#reports", icon: "book" },     // було file
 ];
 
 const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
