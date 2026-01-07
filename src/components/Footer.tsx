@@ -1,5 +1,3 @@
-"use client";
-
 import { Row, IconButton, SmartLink, Text } from "@once-ui-system/core";
 import { person, social } from "@/resources";
 import styles from "./Footer.module.scss";
@@ -29,7 +27,7 @@ export const Footer = () => {
           <Text onBackground="neutral-weak">
             {/* Usage of this template requires attribution. Please don't remove the link to Once UI unless you have a Pro license. */}
             / Собаки-шукаки with{" "}
-            <SmartLink href="https://shukaki-magic.vercel.app/">Once UI</SmartLink>
+            <SmartLink href="https://shukaki-magic.vercel.app/">Собаки-шукаки</SmartLink>
           </Text>
         </Text>
         <Row gap="16">
