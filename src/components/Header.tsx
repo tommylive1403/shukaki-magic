@@ -16,9 +16,9 @@ type TimeDisplayProps = {
 
 const ONEPAGE_NAV = [
   { label: "Про підрозділ", href: "/#about", icon: "person" },
-  { label: "Збір", href: "/#donate", icon: "coin" },      // було credit-card
-  { label: "Контакти", href: "/#contacts", icon: "email" }, // було send
-  { label: "Звіти", href: "/#reports", icon: "book" },     // було file
+  { label: "Збір", href: "/#donate", icon: "coin" },
+  { label: "Контакти", href: "/#contacts", icon: "email" },
+  { label: "Звіти", href: "/#reports", icon: "book" },
 ];
 
 const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
@@ -51,16 +51,7 @@ export const Header = () => {
   return (
     <>
       <Fade s={{ hide: true }} fillWidth position="fixed" height="80" zIndex={9} />
-      <Fade
-        hide
-        s={{ hide: false }}
-        fillWidth
-        position="fixed"
-        bottom="0"
-        to="top"
-        height="80"
-        zIndex={9}
-      />
+      <Fade hide s={{ hide: false }} fillWidth position="fixed" bottom="0" to="top" height="80" zIndex={9} />
 
       <Row
         fitHeight
@@ -93,7 +84,7 @@ export const Header = () => {
             <Row gap="4" vertical="center" textVariant="body-default-s" suppressHydrationWarning>
               {/* HOME */}
               {routes["/"] && (
-                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
+                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} label="Головна" />
               )}
 
               <Line background="neutral-alpha-medium" vert maxHeight="24" />
@@ -101,7 +92,7 @@ export const Header = () => {
               {/* ONE-PAGE ANCHORS */}
               {ONEPAGE_NAV.map((item) => (
                 <Row key={item.href}>
-                  {/* Desktop: with label */}
+                  {/* Desktop: label visible */}
                   <Row s={{ hide: true }}>
                     <ToggleButton
                       prefixIcon={item.icon}
@@ -111,11 +102,12 @@ export const Header = () => {
                     />
                   </Row>
 
-                  {/* Mobile: icon only */}
+                  {/* Mobile: icon only visually, але label лишається для доступності */}
                   <Row hide s={{ hide: false }}>
                     <ToggleButton
                       prefixIcon={item.icon}
                       href={item.href}
+                      label={item.label}   // ✅ головне виправлення
                       selected={pathname === "/"}
                     />
                   </Row>
