@@ -9,7 +9,7 @@ const person: Person = {
   avatar: "/images/avatar.jpg", // можеш замінити пізніше
   email: "",
   location: "Europe/Kyiv",
-  languages: [],
+  languages: [ua],
 };
 
 const newsletter: Newsletter = {
@@ -27,7 +27,7 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/og/logo.png",
   label: "Головна",
   title: "Собаки Шукаки",
   description: "Підрозділ безпілотних систем",
@@ -48,7 +48,7 @@ const about: About = {
   title: "About",
   description: "",
   tableOfContent: { display: false, subItems: false },
-  avatar: { display: false },
+  avatar: { display: true },
   calendar: { display: false, link: "" },
   intro: { display: false, title: "", description: <></> },
   work: { display: false, title: "", experiences: [] },
