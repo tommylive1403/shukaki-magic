@@ -27,6 +27,7 @@ export const Footer = () => {
           <Text onBackground="neutral-weak">© {currentYear} /</Text>
           <Text paddingX="4">{person.name}</Text>
           <Text onBackground="neutral-weak">
+<<<<<<< Updated upstream
             / Собаки Шукаки{" "}
             <SmartLink href="https://shukaki-magic.vercel.app/">Собаки Шукаки</SmartLink>
           </Text>
