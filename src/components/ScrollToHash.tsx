@@ -1,21 +1,24 @@
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+"use client";
 
-export function ScrollToHash() {
-  const router = useRouter();
+import { useEffect } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
+
+export default function ScrollToHash() {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
-    // Get the hash from the URL
-    const hash = window.location.hash;
-    if (hash) {
-      // Remove the '#' symbol
-      const id = hash.replace("#", "");
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [router]);
+    // Даємо DOM “дихнути” після навігації/рендеру
+    const id = window.location.hash?.replace("#", "");
+    if (!id) return;
+
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    // М’який скрол + невеликий offset під fixed header
+    const y = el.getBoundingClientRect().top + window.scrollY - 96;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  }, [pathname, searchParams]);
 
   return null;
 }
