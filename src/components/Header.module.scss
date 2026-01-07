@@ -7,6 +7,11 @@
     mask-image: linear-gradient(rgba(0,0,0) 25%, rgba(0, 0, 0, 0) 100%);
     mask-size: 100% 100%;
 }
+.toggle-btn:focus-visible {
+  outline: 3px solid rgba(255,255,255,0.12);
+  outline-offset: 2px;
+  border-radius: var(--radius-s);
+}
 
 @media (max-width: breakpoints.$s) {
     .position {
