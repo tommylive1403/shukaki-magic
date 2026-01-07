@@ -96,32 +96,49 @@ export default function Home() {
 
         <Row gap="24" wrap>
           {/* MONOBANK */}
-          <Column gap="m" style={{ flex: "1 1 360px" }}>
-            <Button
-              href="https://send.monobank.ua/jar/4g2vud36xP"
-              size="l"
-              variant="primary"
-            >
-              Monobank
-            </Button>
+<Column gap="m" style={{ flex: "1 1 360px", minWidth: 0 }}>
+  <Button
+    href="https://send.monobank.ua/jar/4g2vud36xP"
+    size="l"
+    variant="primary"
+  >
+    Monobank
+  </Button>
 
-            <div
-              style={{
-                width: "100%",
-                maxWidth: 360,
-                borderRadius: 12,
-                overflow: "hidden",
-                border: "1px solid rgba(255,255,255,0.1)",
-              }}
-            >
-              <iframe
-                src="https://send.monobank.ua/widget.html?jar=4CcgXWgoRV9G54VqCtuCz3s23em3i7uS&sendId=4g2vud36xP&type=qrp&colorScheme=black"
-                title="Monobank QR"
-                style={{ width: "100%", height: 360, border: "none" }}
-                loading="lazy"
-              />
-            </div>
-          </Column>
+  <div className="monobank-wrapper">
+    <iframe
+      className="monobank-iframe"
+      src="https://send.monobank.ua/widget.html?jar=4CcgXWgoRV9G54VqCtuCz3s23em3i7uS&sendId=4g2vud36xP&type=qrp&colorScheme=black"
+      title="Monobank QR"
+      loading="lazy"
+    />
+  </div>
+</Column>
+
+<style jsx>{`
+  .monobank-wrapper {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    aspect-ratio: 1 / 1;
+    min-height: 240px;
+  }
+  .monobank-iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  @media (min-width: 720px) {
+    .monobank-wrapper {
+      aspect-ratio: auto;
+      height: 360px;
+    }
+  }
+`}</style>
+
 
           {/* CRYPTO + SHARE (client) */}
           <DonateActions />
