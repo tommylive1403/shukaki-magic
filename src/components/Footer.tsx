@@ -30,8 +30,13 @@ export const Footer = () => {
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             / Собаки Шукаки{" "}
             <SmartLink href="https://shukaki-magic.vercel.app/">Собаки Шукаки</SmartLink>
+=======
+            / Собаки-шукаки with{" "}
+            <SmartLink href="https://shukaki-magic.vercel.app/">Once UI</SmartLink>
+>>>>>>> Stashed changes
 =======
             / Собаки-шукаки with{" "}
             <SmartLink href="https://shukaki-magic.vercel.app/">Once UI</SmartLink>
