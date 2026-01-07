@@ -30,6 +30,8 @@ export const Footer = () => {
 <<<<<<< Updated upstream
             / Собаки Шукаки{" "}
             <SmartLink href="https://shukaki-magic.vercel.app/">Собаки Шукаки</SmartLink>
+            / Собаки-шукаки with{" "}
+            <SmartLink href="https://shukaki-magic.vercel.app/">Once UI</SmartLink>
           </Text>
         </Text>
         <Row gap="16">
