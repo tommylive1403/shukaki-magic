@@ -24,6 +24,8 @@ const routes: RoutesConfig = {
 "/gallery": false,
 };
 
+const protectedRoutes: ProtectedRoutesConfig = {};
+
 const display: DisplayConfig = {
   location: true,
   time: true,
