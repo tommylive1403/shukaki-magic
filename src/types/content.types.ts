@@ -67,10 +67,7 @@ export type Social = Array<{
  * Base interface for page configuration with common properties.
  */
 export interface BasePageConfig {
-  /** Path to the page
-   *
-   * The path should be relative to the public directory
-   */
+  /** Path to the page route from the site root (e.g., "/about") */
   path: `/${string}` | string;
   /** Label for navigation or display */
   label: string;
