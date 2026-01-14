@@ -1,3 +1,5 @@
+"use client";
+
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -14,7 +16,7 @@ type TimeDisplayProps = {
 
 const ONEPAGE_NAV = [
   { label: "Про підрозділ", href: "/#about", icon: "person" },
-  { label: "Збір", href: "/#donate", icon: "coin" },
+  { label: "Збір", href: "/#donate", icon: "credit-card" },
   { label: "Контакти", href: "/#contacts", icon: "email" },
   { label: "Звіти", href: "/#reports", icon: "book" },
 ];
