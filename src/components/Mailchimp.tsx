@@ -157,7 +157,7 @@ export const Mailchimp: React.FC<React.ComponentProps<typeof Column>> = ({ ...fl
               checked
             />
           </div>
-          <div id="mce-responses" className="clearfalse">
+          <div id="mce-responses" className="clear">
             <div className="response" id="mce-error-response" style={{ display: "none" }}></div>
             <div className="response" id="mce-success-response" style={{ display: "none" }}></div>
           </div>
